@@ -1,28 +1,114 @@
 window.onload = function() {
-    function getEventTarget(e) {
-        e = e || window.event;
-        return e.target || e.srcElement;
+
+    var user_scrolled = false;
+
+    // Getting window size
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth,
+        y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+        console.log(y);
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach( function(element) {
+        element.style.height = y + "px";
+        console.log(element.style);
+    });
+
+
+    // Highlight nav selection
+
+    function refreshNav(){
+        var nav = document.getElementsByTagName('nav'); //returns a HTMLCollection
+        var ayyys = nav[0].getElementsByTagName('a');
+        for (var i = 0; i < ayyys.length; i++) { // iterate over it
+            user_scrolled = false;
+            ayyys[i].classList.remove("selected");// a
+        }
     }
 
-    var service_one = document.getElementById('service-one');
-    service_one.setAttribute("style", "display: block;");
+    var nav = document.getElementsByTagName('nav'); //returns a HTMLCollection
+    var ayyys = nav[0].getElementsByTagName('a');
+    for (var i = 0; i < ayyys.length; i++) { // iterate over it
+        ayyys[i].onclick = function () {
+            user_scrolled = false;
+            refreshNav();
+            this.classList.add("selected");
+        }
+    }
 
-    document.getElementById('services-nav').onclick = function(event) {
-        var target = getEventTarget(event);
+    // ON SCROLL CHANGE CSS FOR HEADER
 
-        var selector = target.id.substring(0, target.id.length - 4);
+    var last_known_scroll_position = 0;
+    var ticking = false;
 
-        var service_one = document.getElementById('service-one');
-        service_one.setAttribute("style", "display: none;");
+    function doSomething(scroll_pos, callback) {
+        if(user_scrolled) {
+            refreshNav();
+        }
+        var header = document.getElementsByTagName('header');
+        if (scroll_pos < 10) {
+            header[0].classList.remove("header-else");// a
+            header[0].classList.add("header-top");// a
 
-        var service_two = document.getElementById('service-two');
-        service_two.setAttribute("style", "display: none;");
+        } else {
+            header[0].classList.remove("header-top");// a
+            header[0].classList.add("header-else");// a
+        }
+        callback();
+    }
 
-        var service_three = document.getElementById('service-three');
-        service_three.setAttribute("style", "display: none;");
+    window.addEventListener('scroll', function(e) {
+        last_known_scroll_position = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                doSomething(last_known_scroll_position, function () {
+                    user_scrolled = true;
+                    ticking = false;
+                });
+            });
+
+            ticking = true;
+        }
+    });
 
 
-        var service = document.getElementById(selector);
-        service.setAttribute("style", "display: block;");
-    };
+
+
+    // FOR TRANSITION CHECKING
+
+
+    // This is for the services selector ---------------------------------------------
+
+    // function getEventTarget(e) {
+    //     e = e || window.event;
+    //     return e.target || e.srcElement;
+    // }
+    //
+    // var service_one = document.getElementById('service-one');
+    // service_one.setAttribute("style", "display: block;");
+    //
+    // document.getElementById('services-nav').onclick = function(event) {
+    //     var target = getEventTarget(event);
+    //
+    //     var selector = target.id.substring(0, target.id.length - 4);
+    //
+    //     var service_one = document.getElementById('service-one');
+    //     service_one.setAttribute("style", "display: none;");
+    //
+    //     var service_two = document.getElementById('service-two');
+    //     service_two.setAttribute("style", "display: none;");
+    //
+    //     var service_three = document.getElementById('service-three');
+    //     service_three.setAttribute("style", "display: none;");
+    //
+    //
+    //     var service = document.getElementById(selector);
+    //     service.setAttribute("style", "display: block;");
+    // };
+
 };
