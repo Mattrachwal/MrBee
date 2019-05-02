@@ -50,7 +50,7 @@ window.onload = function() {
             refreshNav();
         }
         var header = document.getElementsByTagName('header');
-        if (scroll_pos < 10) {
+        if (scroll_pos < 50) {
             header[0].classList.remove("header-else");// a
             header[0].classList.add("header-top");// a
 
@@ -67,11 +67,10 @@ window.onload = function() {
         if (!ticking) {
             window.requestAnimationFrame(function() {
                 doSomething(last_known_scroll_position, function () {
-                    user_scrolled = true;
+                    console.log('wtf');
                     ticking = false;
                 });
             });
-
             ticking = true;
         }
     });
