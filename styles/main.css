@@ -250,13 +250,17 @@ section {
 }
 
 #services {
-    background-color: #fff;
+    background-color: #202020;
+    overflow: hidden;
 }
 
 .service {
     float: left;
-    width: 50%;
+    width: 48.5%;
     background-color: #fff;
+    margin: 1% 1% 1% 1%;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
 
 }
 .service h4 {
@@ -276,6 +280,7 @@ section {
     text-align: left;
     font-weight: 300;
     font-size: 1.5rem;
+    margin-right: 5%;
     width: 50%;
     float:right;
 }
@@ -287,7 +292,9 @@ section {
 }
 
 #service-one {
-    width: 100%;
+    width: 98%;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 #service-one img {
@@ -300,6 +307,21 @@ section {
 #service-one p {
     margin-right: 5%;
     margin-bottom: 2.5%;
+}
+
+#service-two {
+    float: left;
+    margin-right: .5%;
+}
+#service-three {
+    float: right;
+    margin-left: 0;
+}
+
+#fake-spacer {
+    width:  100%;
+    height: 2%;
+    background-color: #202020;
 }
 
 #service-one h4 {
