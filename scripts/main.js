@@ -12,11 +12,10 @@ window.onload = function() {
 
         console.log(y);
     const sections = document.querySelectorAll('section');
-
-    sections.forEach( function(element) {
-        element.style.height = y + "px";
-        console.log(element.style);
-    });
+    sections[0].style.height = y + "px";
+    // sections.forEach( function(element) {
+    //     element.style.height = y + "px";
+    // });
 
 
     // Highlight nav selection

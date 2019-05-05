@@ -90,7 +90,8 @@ header {
 }
 
 .header-top {
-    background-color: rgba(255, 255, 255, .75)
+    background-color: rgba(255, 255, 255, 1)
+    /*background-color: rgba(255, 255, 255, .75)*/
 }
 .header-else {
     background-color: rgba(255, 255, 255, 1)
@@ -157,6 +158,47 @@ section {
     background-size: cover;
 }
 
+#home #main-brand {
+    height: 400px;
+    width: 20%;
+    position: absolute;
+    left: -5%;
+    top: 50px;
+    background-image: url('../resources/BeeLogoLarge.png');
+    background-size: contain;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-color: #202020;
+    z-index: 5;
+
+
+}
+
+#home #main-brand-bg {
+    height: 420px;
+    width: 16%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #f9c041;
+    z-index: 3;
+
+
+}
+
+#home #main-brand span {
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    background-color: #202020;
+    z-index: 7;
+}
+
 #home #info {
     position: absolute;
     text-align: center;
@@ -211,48 +253,60 @@ section {
     background-color: #fff;
 }
 
-#services ul {
-    height: 50px;
-    border-top: 2px solid #111111;
-    border-bottom: 2px solid #111111;
-    list-style: none;
-    background-color: #FFD200;
-}
-
-#services ul li {
-    line-height: 50px;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 300;
+.service {
+    float: left;
+    width: 50%;
+    background-color: #fff;
 
 }
-
-#services ul li:hover {
-    background-color: #ffec99;
-}
-
 .service h4 {
+    display: inline-block;
+    /*margin-top: 5%;*/
+    width: 50%;
+    text-align: left;
     font-size: 2.5rem;
-    padding: 2.5% 0;
+    float:right;
+    border-bottom: 5px solid #000;
+    /*margin-right: 5%*/
+
+    margin: 5% 5% 5% 0;
 }
 
 .service p {
+    text-align: left;
     font-weight: 300;
     font-size: 1.5rem;
-    text-align: justify;
-    text-indent: 2em;
     width: 50%;
-
+    float:right;
 }
 
 .service img {
-    margin: 0 0 20px 20px;
-
-    width: 45%;
-    float: right;
-    /*padding: 2.5%;*/
-
+    margin-top: 10%;
+    width: 35%;
+    float: left;
 }
+
+#service-one {
+    width: 100%;
+}
+
+#service-one img {
+    margin-top: 0;
+    margin-left: 10%;
+    height: 500px;
+    width: 30%;
+}
+
+#service-one p {
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+}
+
+#service-one h4 {
+margin-right: 5%;
+margin-bottom: 2.5%;
+}
+
 
 #service-area {
 
@@ -264,19 +318,20 @@ section {
 
 #service-area p {
     padding: 2.5%;
-    margin: 5%;
     font-size: 2vw;
     font-weight: 900;
-    width: 50%;
+    margin-top: 5%;
+    width: 40%;
     float: left;
-    background-color: rgba(255, 255, 255, .75)
+    background-color: rgba(255, 255, 255, 1)
 }
 
 #service-area {
     background-image: url('../resources/map.png');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: right;
 }
 
 footer {
