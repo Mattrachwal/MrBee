@@ -181,18 +181,6 @@ section {
     border-bottom: 10px solid #f9c041;
 }
 
-#home #main-brand-bg {
-    height: auto;
-    width: 16%;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    background-color: #f9c041;
-    z-index: 3;
-
-
-}
-
 #home #home-info {
     position: absolute;
     text-align: center;
@@ -431,7 +419,7 @@ section {
     padding: 5%;
     font-size: 2vw;
     font-weight: 900;
-    width: 100%;
+    width: 90%;
     background-color: rgba(255, 255, 255, 1);
     float: left;
 }
@@ -537,12 +525,143 @@ footer #footer-logo {
 
 }
 
-@media screen and (max-width: 767px) {
-    /* start of medium tablet styles */
+@media screen and (max-width: 920px) {
+    #service-area-left {
+        clear: both;
+        width: 100%;
+        background-color: #ffffff;
+    }
 
+    #service-area-right {
+        clear: both;
+        width: 100%;
+        background-color: #ffffff;
+    }
 }
 
-@media screen and (max-width: 479px) {
-    /* start of phone styles */
+@media screen and (max-width: 850px) {
+    /* start of medium tablet styles */
+    #home #main-brand {
+        height: 175px;
+        width: auto;
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 50px;
+        padding: 0 1.5%;
+        background-image: url('../resources/logoWithText.png');
+        background-size: contain;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-color: #202020;
+        background-position: center;
+        z-index: 5;
+        border-left: 10px solid #f9c041;
+        border-right: none;
+        border-bottom: 10px solid #f9c041;
+    }
 
+    #home #hero-shot {
+        width: 100%;
+        height: 100%;
+        background-image: url('../resources/hero-shot-2.jpg');
+        background-size: cover;
+        /*background-position: 0% 0;*/
+    }
+
+    #home #home-info {
+        position: absolute;
+        text-align: center;
+        padding: 2.5%;
+        width: 30%;
+        bottom: 60%;
+        right: 5%;
+        z-index: 3;
+        border-radius: 5%;
+        background-color: rgba(255, 255, 255, .75);
+        display: none;
+    }
+
+    #home #home-info p {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #000;
+    }
+
+    #home #call-to-action p {
+        line-height: 75px;
+        height: 75px;
+        font-size: 2.5rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    #wrapper {
+        width: 100%;
+    }
+    header nav ul li {
+        font-size: 1.5rem;
+
+        /*border: 2px solid #000;*/
+        /*border-radius: 25px;*/
+
+    }
+    #intro p {
+        clear: both;
+        width: 95%;
+        font-size: 1.5rem;
+    }
+
+    #intro ul {
+        clear: both;
+        width: 95%;
+        padding-bottom: 5%;
+    }
+    #home #call-to-action p {
+        line-height: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* start of medium tablet styles */
+
+    #home #call-to-action p {
+        line-height: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    /* start of phone styles */
+    header nav ul li {
+        font-size: 1.2rem;
+
+        /*border: 2px solid #000;*/
+        /*border-radius: 25px;*/
+
+    }
+    #home #home-info {
+        display: none;
+    }
+
+    #home #hero-shot {
+        width: 100%;
+        height: 100%;
+        background-image: url('../resources/logoWithText.png');
+        background-size: contain;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-position: center;
+    }
+
+    #home #main-brand {
+        display: none;
+    }
+    #home #call-to-action p {
+        font-size: 1.5rem;
+    }
 }
