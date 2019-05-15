@@ -422,7 +422,7 @@ section {
     background-position: center;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    height: 60%;
+    height: 80%;
     width: 100%;
 }
 
@@ -431,9 +431,15 @@ section {
     padding: 5%;
     font-size: 2vw;
     font-weight: 900;
-    width: 90%;
+    width: 100%;
     background-color: rgba(255, 255, 255, 1);
     float: left;
+}
+
+#service-area-message a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
 }
 
 #service-area #list-title {
@@ -453,6 +459,7 @@ section {
 
 #service-area ul li {
     font-weight: 900;
+    font-size: 1.2rem;
     padding: 5px 10px;
     float: left;
 }
