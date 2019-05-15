@@ -10,9 +10,10 @@ window.onload = function() {
         x = w.innerWidth || e.clientWidth || g.clientWidth,
         y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
-        console.log(y);
+        console.log('what the fuck');
     const sections = document.querySelectorAll('section');
-    sections[0].style.height = y + "px";
+    //sections[0].style.height = y + "px";
+    sections[5].style.height = y + "px";
     // sections.forEach( function(element) {
     //     element.style.height = y + "px";
     // });

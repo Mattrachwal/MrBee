@@ -42,6 +42,11 @@ html {
     box-shadow:         0 0px 20px #000000;
 }
 
+.shadow-center {
+    -moz-box-shadow:    0px 0px 20px #000000;
+    -webkit-box-shadow: 0px 0px 20px #000000;
+    box-shadow:         0px 0px 20px #000000;
+}
 .inner-shadow {
     -moz-box-shadow:    inset 0 -10px 20px #000000;
     -webkit-box-shadow: inset 0 -10px 20px #000000;
@@ -117,7 +122,7 @@ header nav ul li {
     font-size: 2vw;
     font-weight: 900;
     text-align: center;
-    width:25%;
+    width:33%;
     float: left;
     /*border: 2px solid #000;*/
     /*border-radius: 25px;*/
@@ -154,27 +159,30 @@ section {
 #home #hero-shot {
     width: 100%;
     height: 100%;
-    background-image: url('../resources/hero.jpg');
+    background-image: url('../resources/hero-shot-2.jpg');
     background-size: cover;
+    background-position: center;
 }
 
 #home #main-brand {
-    height: 400px;
-    width: 20%;
+    height: 250px;
+    width: auto;
     position: absolute;
-    left: -5%;
+    left: 0;
     top: 50px;
-    background-image: url('../resources/BeeLogoLarge.png');
+    padding: 0 1.5%;
+    background-image: url('../resources/logoWithText.png');
     background-size: contain;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-color: #202020;
+    background-position: center;
     z-index: 5;
-
-
+    border-right: 10px solid #f9c041;
+    border-bottom: 10px solid #f9c041;
 }
 
 #home #main-brand-bg {
-    height: 420px;
+    height: auto;
     width: 16%;
     position: absolute;
     left: 0;
@@ -185,35 +193,22 @@ section {
 
 }
 
-#home #main-brand span {
-    font-family: 'Orbitron', sans-serif;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: #fff;
-    font-size: 3vw;
-    font-weight: 900;
-    text-align: center;
-    width: 100%;
-    background-color: #202020;
-    z-index: 7;
-}
-
-#home #info {
+#home #home-info {
     position: absolute;
     text-align: center;
     padding: 2.5%;
-    width: 35%;
+    width: 30%;
     bottom: 50%;
     right: 5%;
     z-index: 3;
+    border-radius: 5%;
     background-color: rgba(255, 255, 255, .75)
 }
 
-#home #info p {
+#home #home-info p {
+    font-weight: 700;
     font-size: 2rem;
     text-align: center;
-
     color: #000;
 }
 
@@ -241,12 +236,53 @@ section {
 
 }
 
+#home #call-to-action a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 700;
+}
+
 #home #hero-cradle {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     /*border: #fff solid 2px;*/
+}
+
+#intro-container {
+    border-top: 5px solid #ffffff;
+    border-bottom: 5px solid #ffffff;
+    width: 95%;
+    padding: 2.5%;
+}
+
+#intro p {
+    float: right;
+    width:45%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #000000;
+    background-color: #f9c041;
+    padding: 2.5%;
+}
+
+#intro ul {
+    margin-top: 1%;
+    float: right;
+    width: 45%;
+    font-size: 1.8rem;
+    color: #ffffff;
+    list-style-type:circle;
+}
+
+#intro ul li {
+    list-style: none;
+    text-align: center;
+    border-bottom: 5px solid #f9c041;
+    padding: 2%;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #services {
@@ -278,15 +314,17 @@ section {
 
 .service p {
     text-align: left;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.5rem;
     margin-right: 5%;
     width: 50%;
     float:right;
 }
 
-.service img {
-    margin-top: 10%;
+.service div {
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    height: 50%;
     width: 35%;
     float: left;
 }
@@ -296,12 +334,11 @@ section {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
-#service-one img {
-    margin-top: 0;
-    margin-left: 10%;
-    height: 500px;
-    width: 30%;
+#service-one div {
+    background-image: url('../resources/preventative-treatment3.png');
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
 }
 
 #service-one p {
@@ -313,49 +350,124 @@ section {
     float: left;
     margin-right: .5%;
 }
+
+#service-two div {
+    background-image: url('../resources/nest-treatment.png');
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
 #service-three {
     float: right;
     margin-left: 0;
 }
 
-#fake-spacer {
+#service-three div {
+    background-image: url('../resources/nuisance-insect.png');
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
+
+#service-two div{
+    clear: both;
+    height: 30%;
+    width: 100%;
+}
+
+#service-two h4 {
+    clear: both;
+    width: 90%;
+    text-align: center;
+}
+
+#service-two p {
+    width: 90%;
+}
+
+#service-three div{
+    clear: both;
+    height: 30%;
+    width: 100%;
+}
+
+#service-three h4 {
+    clear: both;
+    width: 90%;
+    text-align: center;
+}
+
+#service-three p {
+    width: 90%;
+    margin-bottom: 5%;
+}
+
+.fake-spacer {
     width:  100%;
     height: 2%;
     background-color: #202020;
 }
 
 #service-one h4 {
-margin-right: 5%;
-margin-bottom: 2.5%;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
 }
-
 
 #service-area {
+    background-color: #ffffff;
 
 }
-
-#service-area img {
+#service-area-img {
+    background-image: url('../resources/map.png');
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height: 60%;
     width: 100%;
 }
 
-#service-area p {
-    padding: 2.5%;
+
+#service-area #service-area-message {
+    padding: 5%;
     font-size: 2vw;
     font-weight: 900;
-    margin-top: 5%;
-    width: 40%;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1);
     float: left;
-    background-color: rgba(255, 255, 255, 1)
 }
 
-#service-area {
-    background-image: url('../resources/map.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-position: right;
+#service-area #list-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: #f9c041;
+    padding: 0%;
 }
 
+#service-area ul {
+    list-style: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5%;
+}
+
+#service-area ul li {
+    font-weight: 900;
+    padding: 5px 10px;
+    float: left;
+}
+
+#service-area-left {
+    float: left;
+    width: 50%;
+    background-color: #ffffff;
+}
+
+#service-area-right {
+    float: right;
+    width: 50%;
+    background-color: #ffffff;
+}
 footer {
     height: 100px;
     background-color: #f9c041;
@@ -369,5 +481,61 @@ footer #footer-logo {
     background-position: right;
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: contain; /* Resize the background image to cover the entire container */
+
+}
+
+@media screen and (max-width: 1100px) {
+    #home #call-to-action p {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    .service {
+        clear: both;
+        background-color: #fff;
+        margin: 1% 1% 1% 1%;
+        width: 98%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+    }
+    .service h4 {
+        clear: both;
+        width: 90%;
+        text-align: center;
+     }
+
+    .service p {
+        margin-right: 5%;
+        margin-bottom: 2.5%;
+        width: 90%;
+    }
+
+    .service div {
+        background-position: center;
+        margin-left: 2.5%;
+        margin-top: 2.5%;
+        clear: both;
+        height: 30%;
+        width: 100%;
+    }
+
+    .fake-spacer {
+        width:  100%;
+        height: 2%;
+        background-color: #202020;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
 
 }
