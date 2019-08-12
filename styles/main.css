@@ -109,7 +109,7 @@ header nav ul {
 }
 
 header nav ul li {
-    font-size: 2vw;
+    font-size: 1.8rem;
     font-weight: 900;
     text-align: center;
     width: 25%;
@@ -261,4 +261,207 @@ section {
     padding: 2%;
     width: 50%;
     margin: 0 auto;
+}
+
+/*
+    =======\
+    ======== Services =============>
+    =======/
+*/
+
+#services {
+    background-color: #202020;
+    overflow: hidden;
+}
+
+.service {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    /* margin: 1% 1% 1% 1%; */
+    padding-bottom: 25px;
+    /* margin-bottom: -100%; */
+    margin-bottom: 50px;
+
+}
+
+.service h4 {
+    display: inline-block;
+    /*margin-top: 5%;*/
+    width: 50%;
+    text-align: left;
+    font-size: 2.5rem;
+    float: right;
+    border-bottom: 5px solid #f9c041;
+    /*margin-right: 5%*/
+
+    margin: 5% 5% 5% 0;
+}
+
+.service p {
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-right: 5%;
+    width: 50%;
+    float:right;
+}
+
+
+.service div {
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    height: 400px;
+    width: 35%;
+    float: left;
+}
+
+#service-one div {
+    background-image: url(../resources/preventative-treatment3.png);
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
+
+#service-two div {
+    background-image: url(../resources/nest-treatment.png);
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
+
+#service-three div {
+    background-image: url(../resources/nuisance-insect.png);
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
+}
+
+/*
+    =======\
+    ======== Services =============>
+    =======/
+*/
+
+#pest-container {
+    padding: 50px;
+}
+
+.pests {
+    position: relative;
+    background-color: #fff;
+    width: 22%;
+    margin: 50px 1.5%;
+    float: left;
+    height: 350px;
+    text-decoration: none;
+    color: #202020;
+}
+
+.pests h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.pests img {
+    width: 100%;
+    /* height: auto; */
+    /* float: left; */
+}
+
+.pests p {
+    font-size: 1.7rem;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    background-color: #ffffff;
+    padding: 0 2.5%;
+}
+
+/*
+    =======\
+    ======== Services Area =============>
+    =======/
+*/
+
+#service-area {
+    background-color: #ffffff;
+
+}
+#service-area-img {
+    background-image: url('../resources/map.png');
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+#service-area #service-area-message {
+    padding: 5%;
+    font-size: 2rem;
+    font-weight: 900;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 1);
+    float: left;
+}
+
+#service-area-message a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+}
+
+#service-area #list-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color: #f9c041;
+    padding: 0%;
+}
+
+#service-area ul {
+    list-style: none;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5%;
+}
+
+#service-area ul li {
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    float: left;
+}
+
+#service-area-left {
+    float: left;
+    width: 50%;
+    background-color: #ffffff;
+}
+
+#service-area-right {
+    float: right;
+    width: 50%;
+    height: 900px;
+    background-color: #ffffff;
+}
+footer {
+    height: 100px;
+    background-color: #f9c041;
+}
+
+footer #footer-logo {
+    height: 100px;
+    width: 50%;
+    float: right;
+    background-image: url('../resources/BeeLogoDark250x250.png');
+    background-position: right;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+
 }
