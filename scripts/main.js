@@ -3,21 +3,21 @@ window.onload = function() {
     var user_scrolled = false;
 
     // Getting window size
-    // var w = window,
-    //     d = document,
-    //     e = d.documentElement,
-    //     g = d.getElementsByTagName('body')[0],
-    //     x = w.innerWidth || e.clientWidth || g.clientWidth,
-    //     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    //
-    //     console.log('what the fuck');
-    // const sections = document.querySelectorAll('section');
-    // //sections[0].style.height = y + "px";
-    // sections[0].style.height = y + "px";
-    // // sections.forEach( function(element) {
-    // //     element.style.height = y + "px";
-    // // });
-    //
+    var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = w.innerWidth || e.clientWidth || g.clientWidth,
+        y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+        console.log('what the fuck');
+    const hero = document.getElementById('home');
+    //sections[0].style.height = y + "px";
+    hero.style.height = y + "px";
+    // sections.forEach( function(element) {
+    //     element.style.height = y + "px";
+    // });
+
 
     // Highlight nav selection
     //
