@@ -339,7 +339,7 @@ section {
 
 /*
     =======\
-    ======== Services =============>
+    ======== Pest Identification =============>
     =======/
 */
 
@@ -379,6 +379,34 @@ section {
     right: 0;
     background-color: #ffffff;
     padding: 0 2.5%;
+}
+
+/*
+    =======\
+    ======== Pests =============>
+    =======/
+*/
+
+#pest {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+#pest h2 {
+    width: 50%;
+    margin: 0 auto;
+    color: #202020;
+}
+
+#pest p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 25px;
+}
+
+#pest img {
+    float: left;
+    max-width: 500px;
 }
 
 /*
