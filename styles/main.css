@@ -50,6 +50,10 @@ html {
     box-shadow:         inset 0 -10px 20px #000000;
 }
 
+.yellow-period {
+    color: #f9c041;
+}
+
 body {
     /*font-family: 'Fjalla One', sans-serif;*/
     /*font-family: 'Roboto Condensed', sans-serif;*/
@@ -129,6 +133,30 @@ header img {
     background-color: #202020;
 }
 
+#home h1 {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    color: #ffffff;
+    font-size: 8rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-transform: scaleY(0.6);
+    transform: scaleY(0.6);
+    letter-spacing: -.75rem; 
+}
+
+#home h1 #h1-description {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    -webkit-transform: scaleY(1.5);
+    transform: scaleY(1.5);
+    letter-spacing: normal; 
+}
+
 #home #hero-shot {
     width: 90%;
     height: 1000px;
@@ -144,7 +172,37 @@ header img {
     left: 0;
 }
 
+#home #call-to-action {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 25%;
+    left: 0;
+    z-index: 3;
+}
+
+#home #call-to-action p {
+    height: 100px;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 100px;
+    color: #fefefe;
+    background-color: #f9c041;
+}
+
+#home #call-to-action span {
+    color: #111111;
+    font-weight: 700;
+}
+
+#home #call-to-action a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 700;
+}
+
 #info-section {
+    position: relative;
     width: 100%;
     background-color: #f9c041;
     height: 700px;
@@ -152,19 +210,21 @@ header img {
 
 #info-section-left {
     float: left;
-    width: 50%;
-    height: 500px;
-}
-
-#info-section-left img {
-    display:inline-block;
-    width:100%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../resources/jasonPop.jpg);
+    background-position: 10% 0%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain;
 }
 
 #info-section-right {
-    float:left;
-    width: 50%;
-    height: 500px;
+    position: absolute;
+    right: 5%;
+    top:10%;
+    padding: 2.5%;
+    width: 30%;
+    background-color: #ffffff;
 }
 
 #info-section-right h3 {
@@ -174,6 +234,7 @@ header img {
     font-size: 4rem;
     text-align: center;
     color: #000;
+    border-bottom: 5px solid #f9c041;
 }
 
 #info-section-right p {
@@ -193,8 +254,24 @@ header img {
 }
 
 #services-section {
-    height: 900px;
     background-color: #ffffff;
+}
+
+#services-section h3 {
+    font-size: 3rem;
+    border-bottom: 5px solid #f9c041;
+}
+
+#services-section #services-container {
+    width: 50%;
+    margin-left: 10%;
+}
+
+#services-section #services-container p {
+    width: 60%;
+    margin-left: 10%;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 #services-section img {

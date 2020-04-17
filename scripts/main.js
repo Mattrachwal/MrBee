@@ -1,5 +1,23 @@
 window.onload = function() {
 
+    function sizeSections() {
+        var win = window,
+        doc = document,
+        docElem = doc.documentElement,
+        body = doc.getElementsByTagName('body')[0],
+        x = win.innerWidth || docElem.clientWidth || body.clientWidth,
+        y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+
+        let sections = document.getElementsByClassName("resize-to-screen");
+        for (let i = 0; i < sections.length; i++) {
+            console.log(y);
+            sections[i].style.height = y + 'px';
+        }
+    }
+
+
+    sizeSections();
+
     let last_known_scroll_position = 0;
     let ticking = false;
     let awayFromTop = false;
@@ -8,7 +26,6 @@ window.onload = function() {
     function doSomething(scroll_pos) {
         let header = document.getElementsByTagName("header");
         let logo = document.getElementById("header-logo");
-        console.log(scroll_pos);
         if(scroll_pos <= 25) {
             awayFromTop = false;
         } else {
@@ -19,7 +36,6 @@ window.onload = function() {
             logo.classList.add("followLogo");
             followMorph = true;
         } else {
-            console.log("else");
             if (!awayFromTop && followMorph) {
                 followMorph = false;
                 header[0].classList.remove("followHeader");
@@ -28,6 +44,8 @@ window.onload = function() {
         }
     }
     
+    // trigger the resize
+    window.onresize = sizeSections;
     window.addEventListener('scroll', function(e) {
       last_known_scroll_position = window.scrollY;
     
