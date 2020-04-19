@@ -91,7 +91,7 @@ nav ul {
     list-style: none;
 }
 nav ul li {
-    width: 15%;
+    width: 20%;
     font-size: 1.5rem;
     font-weight: 900;
     text-align: center;
@@ -115,7 +115,7 @@ header img {
     position: fixed;
     width: 150px;
     top: 0;
-    left: 15%;
+    left: 7%;
     padding: 5px;
     border-left: 5px solid #f9c041;
     border-right: 5px solid #f9c041;
@@ -136,11 +136,11 @@ header img {
 #home h1 {
     position: absolute;
     top: 25%;
-    left: 0;
+    left: 10%;
     color: #ffffff;
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 500;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin: 0 auto;
     -webkit-transform: scaleY(0.6);
@@ -151,7 +151,7 @@ header img {
 #home h1 #h1-description {
     display: block;
     width: 100%;
-    font-size: 2rem;
+    font-size: 3rem;
     -webkit-transform: scaleY(1.5);
     transform: scaleY(1.5);
     letter-spacing: normal; 
@@ -255,6 +255,11 @@ header img {
 
 #services-section {
     background-color: #ffffff;
+    padding-bottom: 5%;
+    background-image: url(../resources/waspWhite.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: auto 60%;
 }
 
 #services-section h3 {
@@ -272,12 +277,56 @@ header img {
     margin-left: 10%;
     font-size: 2rem;
     font-weight: 500;
+    padding: 2% 0;
 }
 
 #services-section img {
     float: right;
     padding: 50px;
 }
+
+#service-area-section {
+    background-image: url(../resources/GoodMapShadow.png);
+    background-position: 5% 30%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: auto 80%;
+    position: relative;
+}
+
+#service-area-section h2 {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 20%;
+    padding: 0 10%;
+    background-color: #ffffff;
+    color: #202020;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 20px solid #f9c041;
+}
+
+#service-area-list {
+    margin: 5% 5% 5% 5%;
+    float: right;
+    width: 45%;
+    
+}
+#service-area-list ul {
+    list-style: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#service-area-list ul li {
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2%;
+    width: 19%;
+    display:inline-block;
+}
+
 /*
     =======\
     ======== Services =============>
@@ -509,7 +558,45 @@ footer #footer-logo {
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
+
+    #services-section {
+        background-image: url('../resources/waspWhite.png');
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-position: 100% 50%;
+        background-size: auto 40%;
+    }
+
+    /* #services-section h3 {
+        font-size: 3rem;
+        border-bottom: 5px solid #f9c041;
+    } */
+    
+    #services-section #services-container {
+        width: 60%;
+        margin: 0;
+        padding: 0 5%;
+    }
+    
+    #services-section #services-container p {
+        width: 80%;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 2% 2.5%;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    #home #call-to-action {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        bottom: 20%;
+        left: 0;
+        z-index: 3;
+    }
     
     section {
         width: 100%;
@@ -521,9 +608,243 @@ footer #footer-logo {
     #info-section-left img {
         width: 80%;
     }
+
     #info-section-right {
+        width: 95%;
+        position: absolute;
+        right: 0;
+        top: unset;
+        bottom: 10%;
+        padding: 2.5%;
+        background-color: #ffffff;
+    }
+
+    #services-section {
+        background-image: none;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: auto 50%;
+    }
+
+    #services-section h3 {
+        font-size: 3rem;
+        border-bottom: 5px solid #f9c041;
+    }
+    
+    #services-section #services-container {
+        width: 90%;
+        margin: 0;
+        padding: 0 5%;
+    }
+    
+    #services-section #services-container p {
+        width: 80%;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 2% 2.5%;
+    }
+    
+    #services-section img {
+        float: right;
+        padding: 50px;
+    }
+
+
+    #service-area-section h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 300px;
-        background-color: #f9c041;
+        padding: 0;
+        background-color: #ffffff;
+        color: #202020;
+        font-size: 3rem;
+        text-align: center;
+        border-bottom: 20px solid #f9c041;
+        border-top: 20px solid #202020;
+    }
+
+    #service-area-section {
+        background-image: url(../resources/GoodMapShadow.png);
+        background-position: -250px -100%;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: auto 100%;
+        background-position-y: -100px;
+        padding-top: 10%;
+    }
+
+    #service-area-list {
+        margin: 0;
+        float: right;
+        width: 55%;
     }
  }
+
+ @media (max-width: 1000px) {
+    nav ul li {
+        width: 34%;
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    header img {
+        position: fixed;
+        width: 100px;
+        top: 0;
+        left: 5%;
+        padding: 5px;
+        border-left: 5px solid #f9c041;
+        border-right: 5px solid #f9c041;
+        border-bottom: 5px solid #f9c041;
+        background-color: #202020;
+    }
+    
+    .followLogo {
+        width: 69px;
+    }
+
+    #home #call-to-action p {
+        height: 150px;
+        font-size: 4rem;
+        text-align: center;
+        line-height: 75px;
+        color: #fefefe;
+        background-color: #f9c041;
+    }
+    
+
+    #service-area-section {
+        background-image: url(../resources/GoodMapShadow.png);
+        background-position: -250px -600px;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: auto 100%;
+        padding-top: 500px;
+    }
+
+    #service-area-list {
+        margin: 0;
+        float: right;
+        width: 100%;
+    }
+
+    #service-area-list ul li {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2%;
+        width: 15%;
+        display:inline-block;
+    }
+}
+
+@media (max-width: 640px) {
+
+    #home h1 {
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        color: #ffffff;
+        font-size: 7rem;
+        font-weight: 500;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        -webkit-transform: scaleY(0.6);
+        transform: scaleY(0.6);
+        letter-spacing: -.75rem; 
+    }
+    
+    #home h1 #h1-description {
+        display: block;
+        width: 100%;
+        font-size: 2rem;
+        -webkit-transform: scaleY(1.5);
+        transform: scaleY(1.5);
+        letter-spacing: normal; 
+    }
+
+    #home #call-to-action p {
+        height: 125px;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 50px;
+        font-weight: 700;
+        color: #fefefe;
+        background-color: #f9c041;
+    }
+
+    #service-area-section {
+        background-image: url(../resources/GoodMapShadow.png);
+        background-position: -550px -750px;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: auto 100%;
+        padding-top: 500px;
+    }
+
+    #service-area-list {
+        margin: 0;
+        float: right;
+        width: 100%;
+    }
+
+    #service-area-list ul li {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2% 0;
+        width: 32%;
+        display:inline-block;
+    }
+
+    #services-section h2 {
+        text-align: center;
+    }
+
+    #services-section h3 {
+        font-size: 3rem;
+        border-bottom: 5px solid #f9c041;
+        text-align: center;
+    }
+
+    #services-section #services-container {
+        width: 90%;
+        margin: 0;
+        padding: 0 5%;
+    }
+    
+    #services-section #services-container p {
+        width: 95%;
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 2% 2.5%;
+        text-align: center;
+
+    }
+    
+    #services-section img {
+        float: right;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #service-area-section {
+        background-image: url(../resources/GoodMapShadow.png);
+        background-position: -750px -850px;
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: auto 100%;
+        padding-top: 500px;
+    }
+
+    #service-area-list ul li {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 2% 0;
+        width: 49%;
+        display:inline-block;
+    }
+}
