@@ -1,0 +1,292 @@
+/* General Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: "Rajdhani", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+  background: #222;
+  color: #fff;
+  padding: 0 0 50px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-image: url("../resources/GiantBlackLogo.png");
+  background-position: center;
+  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+}
+
+.header-content h1 {
+  color: #ffffff;
+  font-size: 12rem;
+  font-weight: 500;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transform: scaleY(0.6);
+  transform: scaleY(0.6);
+  letter-spacing: -0.75rem;
+}
+
+.header-content h1 #h1-description {
+  display: block;
+  width: 100%;
+  font-size: 3rem;
+  -webkit-transform: scaleY(1.5);
+  transform: scaleY(1.5);
+  letter-spacing: normal;
+}
+.yellow-period {
+  color: #f9c041;
+}
+
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #f9c041;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* About Service Section */
+.about-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); */
+  box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -10px 20px -10px rgba(0, 0, 0, 0.5);
+
+  /* padding: 20px 0; */
+}
+
+.about-service .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.about-service .image-container {
+  width: 50%; /* Full width or adjust as needed */
+  height: 500px; /* Fixed height to control 'frame' size */
+  background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
+  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+  background-position: top; /* Center the image, or adjust for specific focus */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  overflow: hidden; /* Ensures the container doesn't expand beyond the specified bounds */
+}
+
+.tagline {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  gap: 10px;
+}
+
+.tagline h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.section-bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: url("../resources/herCombCradleTwo.png") no-repeat center top;
+  background-size: cover;
+}
+
+/* Services Section */
+.services h2 {
+  text-align: center;
+  font-size: 4rem;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f9c041;
+}
+
+.services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 20px), 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between; /* Ensures header and link are spaced out */
+}
+
+.service-item h3 {
+  font-size: 1.5rem; /* Adjusted font size */
+  line-height: 2rem;
+  color: #333;
+  margin-bottom: 10px; /* Space below the heading */
+  min-height: 4rem; /* Example minimum height */
+  /* This height should be enough to accommodate two lines of text at the current font size */
+}
+
+.service-item p {
+  font-size: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1; /* Allows paragraph to take up available space, pushing link down */
+}
+
+.service-link {
+  align-self: flex-end; /* Aligns the link to the right */
+  margin-top: 25px; /* Pushes the link to the bottom */
+  text-decoration: none;
+  background-color: #f9c041;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service-link:hover,
+.service-link:focus {
+  background-color: #e89c30;
+}
+
+/* Service Area Section */
+.service-area-map {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 980px) {
+  header {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 1.5rem;
+  }
+  .tagline h2 {
+    font-size: 3.5rem;
+  }
+
+  .section-bottom-image {
+    height: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Jason Section */
+  .about-service .container {
+    flex-direction: column;
+  }
+
+  .about-service .image-container {
+    width: 100%; /* Full width or adjust as needed */
+    height: 200px; /* Fixed height to control 'frame' size */
+    background-image: url("./resources/JasonCutout.png"); /* Adjust path as necessary */
+    background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+    background-position: center; /* Center the image, or adjust for specific focus */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    overflow: hidden; /* Ensures the container doesn't expand beyond the specified bounds */
+  }
+
+  .tagline {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #f9c041;
+  }
+
+  .tagline h2 {
+    font-size: 2.5rem;
+    margin: 10px 0; /* Adds a bit of margin between stacked H2s */
+  }
+  /* SERVICES SECTION */
+  .services-wrapper {
+    grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
+  }
+
+  .service-item {
+    min-width: 100%;
+  }
+
+  .section-bottom-image {
+    height: 0%;
+  }
+  /* Additional adjustments for mobile layout */
+  .header-content,
+  .services,
+  .service-area,
+  footer {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: block;
+    width: 90%; /* Slightly reduce width for padding */
+    margin: 20px auto; /* Center the button with automatic margins */
+  }
+}
