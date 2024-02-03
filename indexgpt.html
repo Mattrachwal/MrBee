@@ -24,6 +24,9 @@
         >
       </div>
     </header>
+    <div class="counter-section">
+      <span id="counter">4,000,000</span> DEAD BUGS
+    </div>
     <section class="about-service">
       <div class="container about-container">
         <div class="image-container"></div>
@@ -127,5 +130,21 @@
         <p>&copy; 2024 Mr. Bee Pest Control LLC. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // JavaScript for the counter
+      let count = 6000000; // Starting number
+      const increment = 1; // How much to increment
+      const duration = 1000; // Duration between increments in milliseconds
+
+      const counterElement = document.getElementById("counter");
+
+      function updateCounter() {
+        count += increment;
+        counterElement.innerText = count.toLocaleString("en-US"); // Format number with commas
+      }
+
+      setInterval(updateCounter, duration);
+    </script>
   </body>
 </html>
