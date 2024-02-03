@@ -204,10 +204,28 @@ header {
 }
 
 /* Service Area Section */
+.service-area {
+  text-align: center; /* Centers the content */
+  padding: 20px;
+}
+
 .service-area-map {
-  max-width: 100%;
+  max-width: 100%; /* Ensures the map is responsive */
   height: auto;
-  margin: 20px 0;
+  margin-bottom: 20px; /* Adds space between the map and the city list */
+}
+
+.cities-list {
+  text-align: left; /* Aligns the city list to the left for readability */
+  display: inline-block; /* Aligns the list in the center of the section */
+  text-align: start; /* Ensures text alignment is consistent for all browsers */
+  max-width: 100%; /* Ensures the list does not exceed the container width */
+}
+
+.cities-list li {
+  display: inline-block; /* Displays cities side by side */
+  margin: 5px 10px; /* Adds spacing around each city for readability */
+  font-size: 16px; /* Adjusts the font size for visibility */
 }
 
 /* Footer Styles */
