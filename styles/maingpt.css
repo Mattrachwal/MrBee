@@ -115,6 +115,8 @@ header {
   background: #ffffff;
   padding: 20px;
   gap: 10px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100; */
 }
 
 .tagline h2 {
@@ -135,12 +137,17 @@ header {
 }
 
 /* Services Section */
+.services {
+  background-color: #f9c041;
+}
 .services h2 {
+  background-color: #fff;
   text-align: center;
   font-size: 4rem;
   width: 100%;
   margin-bottom: 20px;
-  border-bottom: 2px solid #f9c041;
+  /* border-bottom: 2px solid #f9c041; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .services .container {
@@ -165,8 +172,8 @@ header {
   background-color: #ffffff;
   padding: 20px;
   box-sizing: border-box;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid #333; */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   justify-content: space-between; /* Ensures header and link are spaced out */
 }
@@ -204,10 +211,50 @@ header {
 }
 
 /* Service Area Section */
-.service-area-map {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+
+.service-area {
+  background-color: #ebecec;
+}
+
+.service-area h2 {
+  text-align: left;
+  font-size: 4rem;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f9c041;
+}
+.service-area .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  display: flex;
+  align-items: stretch; /* This will make both children of .content-area stretch to the same height */
+}
+
+.map-area {
+  margin-top: 20px;
+  width: 50%; /* Takes up half of the container */
+  background-image: url("../resources/wisconsin19WhiteBoarder.svg");
+  background-size: cover; /* Cover the entire area of the div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+}
+
+.cities-grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Creates a flexible grid for the city names */
+  gap: 10px;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.cities-grid span {
+  text-align: left;
 }
 
 /* Counter Section */
@@ -321,5 +368,15 @@ footer {
     display: block;
     width: 90%; /* Slightly reduce width for padding */
     margin: 20px auto; /* Center the button with automatic margins */
+  }
+
+  .content-area {
+    flex-direction: column;
+  }
+
+  .map-area,
+  .cities-grid {
+    flex: none; /* Override the flex property */
+    width: 100%; /* Make each take up the full width */
   }
 }
