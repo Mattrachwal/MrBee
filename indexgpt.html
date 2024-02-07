@@ -4,23 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bee, Wasp, and Hornet Pest Control | Southeastern Wisconsin</title>
-    <link rel="stylesheet" href="./styles/maingpt.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Servicing the Southeastern Wisconsin area, MR BEE  guarantees the successful extermination of wasps, hornets, bees, and other invasive insects from your home or business. Call (262) 370-7036 today for a free quote!"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles/maingpt.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Fjalla+One"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700"
+      rel="stylesheet"
+    />
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">-->
+    <link rel="icon" href="./resources/mrBeeFavicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
       rel="stylesheet"
     />
   </head>
   <body>
     <header>
+      <!-- <img id="header-logo" src="./resources/logoWithText.png" /> -->
+
       <div class="container header-content">
-        <h1>
-          MR<span class="yellow-period">.</span> BEE<span id="h1-description"
-            >Bee, Wasp, and Hornet pest control for Southeastern
-            Wisconsin.</span
-          >
-        </h1>
+        <h1>MR<span class="yellow-period">.</span> BEE</h1>
+        <span id="h1-description"
+          >Bee, Wasp, and Hornet pest control for Southeastern Wisconsin.</span
+        >
         <a href="tel:262-370-7036" class="cta-button"
-          >Call Now (262)-370-7036 for a Free Quote</a
+          >Call Now <span class="number">(262)-370-7036</span> Free Quotes!</a
         >
       </div>
     </header>
@@ -131,19 +146,46 @@
     </footer>
 
     <script>
-      // JavaScript for the counter
-      let count = 6000000; // Starting number
-      const increment = 1; // How much to increment
-      const duration = 1000; // Duration between increments in milliseconds
-
+      let count = 4000000; // Starting number
       const counterElement = document.getElementById("counter");
 
-      function updateCounter() {
-        count += increment;
-        counterElement.innerText = count.toLocaleString("en-US"); // Format number with commas
+      function animateCountUp(endValue, duration = 200) {
+        const startValue = count;
+        const startTime = performance.now();
+
+        function updateNumber(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1); // Ensure progress doesn't exceed 1
+          const currentValue = startValue + (endValue - startValue) * progress;
+          counterElement.innerText =
+            Math.floor(currentValue).toLocaleString("en-US");
+
+          if (elapsedTime < duration) {
+            requestAnimationFrame(updateNumber);
+          } else {
+            count = endValue; // Ensure final value is set and formatted properly at the end
+            counterElement.innerText = count.toLocaleString("en-US");
+          }
+        }
+
+        requestAnimationFrame(updateNumber);
       }
 
-      setInterval(updateCounter, duration);
+      function updateCounter() {
+        // Generate a random increment and a new count value
+        const increment = Math.floor(Math.random() * (5000 - 100 + 1)) + 100;
+        const newCount = count + increment;
+
+        // Animate count up to the new value
+        animateCountUp(newCount);
+
+        // Generate a random duration between 1 second (1000ms) and 10 seconds (10000ms) for the next update
+        const duration = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+        setTimeout(updateCounter, duration);
+      }
+
+      // Start the first update
+      updateCounter();
     </script>
   </body>
 </html>

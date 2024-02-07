@@ -8,7 +8,7 @@
 body,
 html {
   font-family: "Rajdhani", sans-serif;
-  color: #333;
+  color: #202020;
   line-height: 1.6;
 }
 
@@ -20,14 +20,25 @@ html {
 
 /* Header Styles */
 header {
-  background: #222;
+  background: #202020;
   color: #fff;
-  padding: 0 0 50px 0;
+  padding: 50px 0;
   text-align: center;
   font-size: 1.5rem;
   background-image: url("../resources/GiantBlackLogo.png");
   background-position: center;
   background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+}
+header img {
+  position: fixed;
+  width: 100px;
+  top: 0;
+  left: 7%;
+  padding: 5px;
+  border-left: 5px solid #f9c041;
+  border-right: 5px solid #f9c041;
+  border-bottom: 5px solid #f9c041;
+  background-color: #202020;
 }
 
 .header-content h1 {
@@ -40,14 +51,16 @@ header {
   -webkit-transform: scaleY(0.6);
   transform: scaleY(0.6);
   letter-spacing: -0.75rem;
+  line-height: 10rem;
 }
 
-.header-content h1 #h1-description {
+.header-content #h1-description {
   display: block;
-  width: 100%;
+  width: 80%;
   font-size: 3rem;
-  -webkit-transform: scaleY(1.5);
-  transform: scaleY(1.5);
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
   letter-spacing: normal;
 }
 .yellow-period {
@@ -63,12 +76,18 @@ header {
   display: inline-block;
   background: #f9c041;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 5%;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  width: 100%;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+  margin: 50px 0;
+}
+
+.number {
+  font-size: 4rem;
+  color: #202020;
 }
 
 /* About Service Section */
@@ -98,7 +117,7 @@ header {
 
 .about-service .image-container {
   width: 50%; /* Full width or adjust as needed */
-  height: 600px; /* Fixed height to control 'frame' size */
+  height: 500px; /* Fixed height to control 'frame' size */
   background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
   background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
   background-position: top; /* Center the image, or adjust for specific focus */
@@ -122,7 +141,7 @@ header {
 .tagline h2 {
   font-size: 4rem;
   font-weight: 800;
-  color: #333;
+  color: #202020;
   margin: 0 0 10px 0;
 }
 
@@ -138,7 +157,7 @@ header {
 
 /* Services Section */
 .services {
-  background-color: #f9c041;
+  background-color: #202020;
 }
 .services h2 {
   background-color: #fff;
@@ -146,7 +165,7 @@ header {
   font-size: 4rem;
   width: 100%;
   margin-bottom: 20px;
-  /* border-bottom: 2px solid #f9c041; */
+  border-bottom: 5px solid #f9c041;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -172,7 +191,7 @@ header {
   background-color: #ffffff;
   padding: 20px;
   box-sizing: border-box;
-  /* border: 2px solid #333; */
+  /* border: 2px solid #202020; */
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   justify-content: space-between; /* Ensures header and link are spaced out */
@@ -181,7 +200,7 @@ header {
 .service-item h3 {
   font-size: 1.5rem; /* Adjusted font size */
   line-height: 2rem;
-  color: #333;
+  color: #202020;
   margin-bottom: 10px; /* Space below the heading */
   min-height: 4rem; /* Example minimum height */
   /* This height should be enough to accommodate two lines of text at the current font size */
@@ -191,6 +210,7 @@ header {
   font-size: 1.5rem;
   color: #555;
   line-height: 1.6;
+  font-weight: 500;
   flex-grow: 1; /* Allows paragraph to take up available space, pushing link down */
 }
 
@@ -214,6 +234,7 @@ header {
 
 .service-area {
   background-color: #ebecec;
+  padding-bottom: 25px;
 }
 
 .service-area h2 {
@@ -255,13 +276,15 @@ header {
 
 .cities-grid span {
   text-align: left;
+  font-weight: 900;
+  font-size: 1rem;
 }
 
 /* Counter Section */
 .counter-section {
   text-align: center;
   margin: 40px auto;
-  padding: 20px;
+
   font-size: 3rem;
   font-family: "Arial", sans-serif;
   background-color: #ffffff;
@@ -279,12 +302,12 @@ header {
 /* Additional styling for "dead wasps" text to differentiate from the counter */
 .counter-section span + text {
   font-size: 20px;
-  color: #333;
+  color: #202020;
   margin-left: 10px;
 }
 /* Footer Styles */
 footer {
-  background: #333;
+  background: #202020;
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -308,6 +331,36 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 50px 0 25px 0;
+  }
+
+  .header-content h1 {
+    font-size: 6rem;
+  }
+
+  .header-content #h1-description {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    background: #f9c041;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .counter-section {
+    display: none;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
   /* Jason Section */
   .about-service {
     background-color: #f9c041;
