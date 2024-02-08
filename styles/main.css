@@ -1,850 +1,440 @@
+/* General Resets */
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body,
 html {
-    scroll-behavior: smooth;
+  font-family: "Rajdhani", sans-serif;
+  color: #202020;
+  line-height: 1.6;
 }
-
-/*Flex Box Stuff*/
 
 .container {
-    display: flex;
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-.column {
-    flex-direction: column;
-}
-
-/*bee color  f9c041*/
-/*whit yelle EBEBD3*/
-/*bkaclikght 3C3C3B*/
-/*better black  2f2f2f*/
-/*better but dark 202020*/
-.clearfloat {
-    clear: both;
-}
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
-
-.shadow {
-    -moz-box-shadow:    0 0px 20px #000000;
-    -webkit-box-shadow: 0 0px 20px #000000;
-    box-shadow:         0 0px 20px #000000;
-}
-
-.shadow-center {
-    -moz-box-shadow:    0px 0px 20px #000000;
-    -webkit-box-shadow: 0px 0px 20px #000000;
-    box-shadow:         0px 0px 20px #000000;
-}
-.inner-shadow {
-    -moz-box-shadow:    inset 0 -10px 20px #000000;
-    -webkit-box-shadow: inset 0 -10px 20px #000000;
-    box-shadow:         inset 0 -10px 20px #000000;
-}
-
-.yellow-period {
-    color: #f9c041;
-}
-
-body {
-    /*font-family: 'Fjalla One', sans-serif;*/
-    /*font-family: 'Roboto Condensed', sans-serif;*/
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 100%;
-    /*background-image: url('../resources/background15.jpg');*/
-    /*background-repeat: repeat;*/
-    background-color: #202020;
-    position: relative;
-}
-
+/* Header Styles */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,.75) 100%);
+  background: #202020;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  background-image: url("../resources/GiantBlackLogo.png");
+  background-position: center;
+  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
 }
-
-.followHeader {
-    background-color: #202020;
-}
-
-nav {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-nav ul {
-    width: 100%;
-    list-style: none;
-}
-nav ul li {
-    width: 20%;
-    font-size: 1.5rem;
-    font-weight: 900;
-    text-align: center;
-}
-
-nav ul li a {
-    height: 50px;
-    width: 100%;
-    color: #ffffff;
-    text-decoration: none;
-    display: inline-block;
-    line-height: 50px;
-}
-
-nav ul li a:hover {
-    color: #f9c041;
-}
-
-
 header img {
-    position: fixed;
-    width: 150px;
-    top: 0;
-    left: 7%;
-    padding: 5px;
-    border-left: 5px solid #f9c041;
-    border-right: 5px solid #f9c041;
-    border-bottom: 5px solid #f9c041;
-    background-color: #202020;
+  position: fixed;
+  width: 100px;
+  top: 0;
+  left: 7%;
+  padding: 5px;
+  border-left: 5px solid #f9c041;
+  border-right: 5px solid #f9c041;
+  border-bottom: 5px solid #f9c041;
+  background-color: #202020;
 }
 
-.followLogo {
-    width: 100px;
+.header-content h1 {
+  color: #ffffff;
+  font-size: 12rem;
+  font-weight: 500;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transform: scaleY(0.6);
+  transform: scaleY(0.6);
+  letter-spacing: -0.75rem;
+  line-height: 10rem;
 }
 
-#home {
-    position: relative;
-    height: 900px;
-    background-color: #202020;
+.header-content #h1-description {
+  display: block;
+  width: 80%;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: normal;
+}
+.yellow-period {
+  color: #f9c041;
 }
 
-#home h1 {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    color: #ffffff;
-    font-size: 10rem;
-    font-weight: 500;
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
-    -webkit-transform: scaleY(0.6);
-    transform: scaleY(0.6);
-    letter-spacing: -.75rem; 
+.logo {
+  max-width: 150px;
+  margin-bottom: 20px;
 }
 
-#home h1 #h1-description {
+.cta-button {
+  display: inline-block;
+  background: #f9c041;
+  color: #fff;
+  padding: 10px 5%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 3rem;
+  width: 100%;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+  margin: 50px 0;
+}
+
+.number {
+  font-size: 4rem;
+  color: #202020;
+}
+
+/* About Service Section */
+.about-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.5); */
+  box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
+
+  /* padding: 20px 0; */
+}
+
+.about-service .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.about-service .image-container {
+  width: 50%; /* Full width or adjust as needed */
+  height: 500px; /* Fixed height to control 'frame' size */
+  background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
+  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+  background-position: top; /* Center the image, or adjust for specific focus */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  overflow: hidden; /* Ensures the container doesn't expand beyond the specified bounds */
+}
+
+.tagline {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  gap: 10px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100; */
+}
+
+.tagline h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #202020;
+  margin: 0 0 10px 0;
+}
+
+.section-bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: url("../resources/herCombCradleTwo.png") no-repeat center top;
+  background-size: cover;
+}
+
+/* Services Section */
+.services {
+  background-color: #202020;
+}
+.services h2 {
+  background-color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #f9c041;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.services .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1140px;
+  margin: auto;
+  padding: 20px;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.333% - 20px), 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  /* border: 2px solid #202020; */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: space-between; /* Ensures header and link are spaced out */
+}
+
+.service-item h3 {
+  font-size: 1.5rem; /* Adjusted font size */
+  line-height: 2rem;
+  color: #202020;
+  margin-bottom: 10px; /* Space below the heading */
+  min-height: 4rem; /* Example minimum height */
+  /* This height should be enough to accommodate two lines of text at the current font size */
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 500;
+  flex-grow: 1; /* Allows paragraph to take up available space, pushing link down */
+}
+
+.service-link {
+  align-self: flex-end; /* Aligns the link to the right */
+  margin-top: 25px; /* Pushes the link to the bottom */
+  text-decoration: none;
+  background-color: #f9c041;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.service-link:hover,
+.service-link:focus {
+  background-color: #e89c30;
+}
+
+/* Service Area Section */
+
+.service-area {
+  background-color: #ebecec;
+  padding-bottom: 25px;
+}
+
+.service-area h2 {
+  text-align: left;
+  font-size: 3rem;
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f9c041;
+}
+
+.service-area p {
+  font-weight: 500;
+}
+
+.service-area .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  display: flex;
+  align-items: stretch; /* This will make both children of .content-area stretch to the same height */
+}
+
+.map-area {
+  margin-top: 20px;
+  width: 50%; /* Takes up half of the container */
+  background-image: url("../resources/wisconsin19WhiteBoarder.svg");
+  background-size: cover; /* Cover the entire area of the div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+}
+
+.cities-grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* Creates a flexible grid for the city names */
+  gap: 10px;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.cities-grid span {
+  text-align: left;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+/* Counter Section */
+.counter-section {
+  text-align: center;
+  margin: 40px auto;
+
+  font-size: 3rem;
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* border-bottom: 1px solid #f9c041; */
+  width: 100%;
+  display: inline-block;
+}
+
+#counter {
+  font-weight: bold;
+  color: #f9c041; /* Theme color for numbers */
+}
+
+/* Additional styling for "dead wasps" text to differentiate from the counter */
+.counter-section span + text {
+  font-size: 20px;
+  color: #202020;
+  margin-left: 10px;
+}
+/* Footer Styles */
+footer {
+  background: #202020;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 980px) {
+  header {
+    font-size: 1rem;
+  }
+  .cta-button {
+    font-size: 1.5rem;
+  }
+  .tagline h2 {
+    font-size: 3.5rem;
+  }
+
+  .section-bottom-image {
+    height: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 50px 0 25px 0;
+  }
+
+  .header-content h1 {
+    font-size: 6rem;
+  }
+
+  .header-content #h1-description {
     display: block;
     width: 100%;
-    font-size: 3rem;
-    -webkit-transform: scaleY(1.5);
-    transform: scaleY(1.5);
-    letter-spacing: normal; 
-}
+    font-size: 2rem;
+  }
 
-#home #hero-shot {
-    width: 90%;
-    height: 1000px;
-    background-image: url(../resources/mrBeeBackSideMailer.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-#home img {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-
-#home #call-to-action {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    bottom: 25%;
-    left: 0;
-    z-index: 3;
-}
-
-#home #call-to-action p {
-    height: 100px;
-    font-size: 4rem;
-    text-align: center;
-    line-height: 100px;
-    color: #fefefe;
-    background-color: #f9c041;
-}
-
-#home #call-to-action span {
-    color: #111111;
-    font-weight: 700;
-}
-
-#home #call-to-action a {
+  .cta-button {
+    background: #f9c041;
+    color: #fff;
     text-decoration: none;
-    color: #111111;
-    font-weight: 700;
-}
+    font-weight: bold;
+    font-size: 2rem;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
+  }
 
-#info-section {
-    position: relative;
-    width: 100%;
+  .counter-section {
+    display: none;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+  /* Jason Section */
+  .about-service {
     background-color: #f9c041;
-    height: 700px;
-}
+    padding: 0;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+  .about-service .container {
+    padding: 0;
+    gap: 0;
+    flex-direction: column;
+  }
 
-#info-section-left {
-    float: left;
+  .about-service .image-container {
+    width: 80%; /* Full width or adjust as needed */
+    height: 250px; /* Fixed height to control 'frame' size */
+    background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
+    background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+    background-position: 0 0; /* Center the image, or adjust for specific focus */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    overflow: hidden; /* Ensures the container doesn't expand beyond the specified bounds */
+  }
+
+  .tagline {
     width: 100%;
-    height: 100%;
-    background-image: url(../resources/jasonPop.jpg);
-    background-position: 10% 0%;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain;
-}
-
-#info-section-right {
-    position: absolute;
-    right: 5%;
-    top:10%;
-    padding: 2.5%;
-    width: 30%;
-    background-color: #ffffff;
-}
-
-#info-section-right h3 {
-    background-color: #ffffff;
-    width: 100%;
-    font-weight: 700;
-    font-size: 4rem;
+    max-width: 100%;
     text-align: center;
-    color: #000;
-    border-bottom: 5px solid #f9c041;
-}
+    padding: 20px;
+    border: none;
+    border-bottom: 2px solid #f9c041;
+  }
 
-#info-section-right p {
-    margin: auto;
-    width: 100%;
-    font-weight: 700;
-    font-size: 2rem;
-    text-align: center;
-    color: #000;
-}
-
-#services-section h2 {
-    padding: 50px;
-    color: #202020;
-    font-weight: 900;
-    font-size: 4rem;
-}
-
-#services-section {
-    background-color: #ffffff;
-    padding-bottom: 5%;
-    background-image: url(../resources/waspWhite.png);
-    background-position: 100% 50%;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: auto 60%;
-}
-
-#services-section h3 {
-    font-size: 3rem;
-    border-bottom: 5px solid #f9c041;
-}
-
-#services-section #services-container {
-    width: 50%;
-    margin-left: 10%;
-}
-
-#services-section #services-container p {
-    width: 60%;
-    margin-left: 10%;
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 2% 0;
-}
-
-#services-section img {
-    float: right;
-    padding: 50px;
-}
-
-#service-area-section {
-    background-image: url(../resources/GoodMapShadow.png);
-    background-position: 5% 30%;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: auto 80%;
-    position: relative;
-}
-
-#service-area-section h2 {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    width: 20%;
-    padding: 0 10%;
-    background-color: #ffffff;
-    color: #202020;
-    font-size: 3rem;
-    text-align: center;
-    border-bottom: 20px solid #f9c041;
-}
-
-#service-area-list {
-    margin: 5% 5% 5% 5%;
-    float: right;
-    width: 45%;
-    
-}
-#service-area-list ul {
-    list-style: none;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-#service-area-list ul li {
-    font-weight: 900;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 2%;
-    width: 19%;
-    display:inline-block;
-}
-
-/*
-    =======\
-    ======== Services =============>
-    =======/
-*/
-
-#services {
-    background-color: #202020;
-    overflow: hidden;
-}
-
-.service {
-    float: left;
-    width: 100%;
-    background-color: #fff;
-    /* margin: 1% 1% 1% 1%; */
-    padding-bottom: 25px;
-    /* margin-bottom: -100%; */
-    margin-bottom: 50px;
-
-}
-
-.service h4 {
-    display: inline-block;
-    /*margin-top: 5%;*/
-    width: 50%;
-    text-align: left;
+  .tagline h2 {
+    line-height: 2rem;
     font-size: 2.5rem;
-    float: right;
-    border-bottom: 5px solid #f9c041;
-    /*margin-right: 5%*/
+    margin: 10px 0; /* Adds a bit of margin between stacked H2s */
+  }
+  /* SERVICES SECTION */
+  .services-wrapper {
+    grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
+  }
 
-    margin: 5% 5% 5% 0;
-}
+  .service-item {
+    min-width: 100%;
+  }
 
-.service p {
-    text-align: left;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-right: 5%;
-    width: 50%;
-    float:right;
-}
-
-
-.service div {
-    margin-left: 2.5%;
-    margin-top: 2.5%;
-    height: 400px;
-    width: 35%;
-    float: left;
-}
-
-#service-one div {
-    background-image: url(../resources/preventative-treatment3.png);
-    background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain;
-}
-
-#service-two div {
-    background-image: url(../resources/nest-treatment.png);
-    background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain;
-}
-
-#service-three div {
-    background-image: url(../resources/nuisance-insect.png);
-    background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain;
-}
-
-/*
-    =======\
-    ======== Pest Identification =============>
-    =======/
-*/
-
-#pest-container {
-    padding: 50px;
-}
-
-.pests {
-    position: relative;
-    background-color: #fff;
-    width: 22%;
-    margin: 50px 1.5%;
-    float: left;
-    height: 350px;
-    text-decoration: none;
-    color: #202020;
-}
-
-.pests h2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1.5rem;
-    width: 100%;
-}
-
-.pests img {
-    width: 100%;
-    /* height: auto; */
-    /* float: left; */
-}
-
-.pests p {
-    font-size: 1.7rem;
-    position: absolute;
-    bottom: -25px;
-    right: 0;
-    background-color: #ffffff;
-    padding: 0 2.5%;
-}
-
-/*
-    =======\
-    ======== Pests =============>
-    =======/
-*/
-
-#pest {
-    background-color: #ffffff;
-    padding: 50px 0;
-}
-
-#pest h2 {
-    width: 50%;
-    margin: 0 auto;
-    color: #202020;
-}
-
-#pest p {
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 25px;
-}
-
-#pest img {
-    float: left;
-    max-width: 500px;
-}
-
-/*
-    =======\
-    ======== Services Area =============>
-    =======/
-*/
-
-#service-area {
-    background-color: #ffffff;
-
-}
-#service-area-img {
-    background-image: url('../resources/map.png');
-    background-position: center;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
-
-#service-area #service-area-message {
-    padding: 5%;
-    font-size: 2rem;
-    font-weight: 900;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 1);
-    float: left;
-}
-
-#service-area-message a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 700;
-}
-
-#service-area #list-title {
+  .section-bottom-image {
+    height: 0%;
+  }
+  /* Additional adjustments for mobile layout */
+  .header-content,
+  .services,
+  .service-area,
+  footer {
     text-align: center;
-    font-weight: 700;
-    font-size: 2rem;
-    background-color: #f9c041;
-    padding: 0%;
-}
+  }
 
-#service-area ul {
-    list-style: none;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 5%;
-}
+  .cta-button {
+    display: block;
+    width: 90%; /* Slightly reduce width for padding */
+    margin: 20px auto; /* Center the button with automatic margins */
+  }
 
-#service-area ul li {
-    font-weight: 900;
-    font-size: 1.2rem;
-    padding: 5px 10px;
-    float: left;
-}
+  .content-area {
+    flex-direction: column;
+  }
 
-#service-area-left {
-    float: left;
-    width: 50%;
-    background-color: #ffffff;
-}
-
-#service-area-right {
-    float: right;
-    width: 50%;
-    height: 900px;
-    background-color: #ffffff;
-}
-footer {
-    height: 100px;
-    background-color: #f9c041;
-}
-
-footer #footer-logo {
-    height: 100px;
-    width: 50%;
-    float: right;
-    background-image: url('../resources/BeeLogoDark250x250.png');
-    background-position: right;
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: contain; /* Resize the background image to cover the entire container */
-
-}
-
-@media (max-width: 1500px) {
-
-    #services-section {
-        background-image: url('../resources/waspWhite.png');
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-position: 100% 50%;
-        background-size: auto 40%;
-    }
-
-    /* #services-section h3 {
-        font-size: 3rem;
-        border-bottom: 5px solid #f9c041;
-    } */
-    
-    #services-section #services-container {
-        width: 60%;
-        margin: 0;
-        padding: 0 5%;
-    }
-    
-    #services-section #services-container p {
-        width: 80%;
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 2% 2.5%;
-    }
-}
-
-@media (max-width: 1100px) {
-
-    #home #call-to-action {
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        bottom: 20%;
-        left: 0;
-        z-index: 3;
-    }
-    
-    section {
-        width: 100%;
-    }
-    #info-section-left {
-        width: 100%;
-    }
-
-    #info-section-left img {
-        width: 80%;
-    }
-
-    #info-section-right {
-        width: 95%;
-        position: absolute;
-        right: 0;
-        top: unset;
-        bottom: 10%;
-        padding: 2.5%;
-        background-color: #ffffff;
-    }
-
-    #services-section {
-        background-image: none;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: auto 50%;
-    }
-
-    #services-section h3 {
-        font-size: 3rem;
-        border-bottom: 5px solid #f9c041;
-    }
-    
-    #services-section #services-container {
-        width: 90%;
-        margin: 0;
-        padding: 0 5%;
-    }
-    
-    #services-section #services-container p {
-        width: 80%;
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 2% 2.5%;
-    }
-    
-    #services-section img {
-        float: right;
-        padding: 50px;
-    }
-
-
-    #service-area-section h2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 0;
-        background-color: #ffffff;
-        color: #202020;
-        font-size: 3rem;
-        text-align: center;
-        border-bottom: 20px solid #f9c041;
-        border-top: 20px solid #202020;
-    }
-
-    #service-area-section {
-        background-image: url(../resources/GoodMapShadow.png);
-        background-position: -250px -100%;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: auto 100%;
-        background-position-y: -100px;
-        padding-top: 10%;
-    }
-
-    #service-area-list {
-        margin: 0;
-        float: right;
-        width: 55%;
-    }
- }
-
- @media (max-width: 1000px) {
-    nav ul li {
-        width: 34%;
-        font-size: 1.5rem;
-        font-weight: 900;
-        text-align: center;
-    }
-
-    header img {
-        position: fixed;
-        width: 100px;
-        top: 0;
-        left: 5%;
-        padding: 5px;
-        border-left: 5px solid #f9c041;
-        border-right: 5px solid #f9c041;
-        border-bottom: 5px solid #f9c041;
-        background-color: #202020;
-    }
-    
-    .followLogo {
-        width: 69px;
-    }
-
-    #home #call-to-action p {
-        height: 150px;
-        font-size: 4rem;
-        text-align: center;
-        line-height: 75px;
-        color: #fefefe;
-        background-color: #f9c041;
-    }
-    
-
-    #service-area-section {
-        background-image: url(../resources/GoodMapShadow.png);
-        background-position: -250px -600px;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: auto 100%;
-        padding-top: 500px;
-    }
-
-    #service-area-list {
-        margin: 0;
-        float: right;
-        width: 100%;
-    }
-
-    #service-area-list ul li {
-        font-weight: 900;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 2%;
-        width: 15%;
-        display:inline-block;
-    }
-}
-
-@media (max-width: 640px) {
-
-    #home h1 {
-        position: absolute;
-        top: 25%;
-        left: 10%;
-        color: #ffffff;
-        font-size: 7rem;
-        font-weight: 500;
-        width: 80%;
-        text-align: center;
-        margin: 0 auto;
-        -webkit-transform: scaleY(0.6);
-        transform: scaleY(0.6);
-        letter-spacing: -.75rem; 
-    }
-    
-    #home h1 #h1-description {
-        display: block;
-        width: 100%;
-        font-size: 2rem;
-        -webkit-transform: scaleY(1.5);
-        transform: scaleY(1.5);
-        letter-spacing: normal; 
-    }
-
-    #home #call-to-action p {
-        height: 125px;
-        font-size: 3rem;
-        text-align: center;
-        line-height: 50px;
-        font-weight: 700;
-        color: #fefefe;
-        background-color: #f9c041;
-    }
-
-    #service-area-section {
-        background-image: url(../resources/GoodMapShadow.png);
-        background-position: -550px -750px;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: auto 100%;
-        padding-top: 500px;
-    }
-
-    #service-area-list {
-        margin: 0;
-        float: right;
-        width: 100%;
-    }
-
-    #service-area-list ul li {
-        font-weight: 900;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 2% 0;
-        width: 32%;
-        display:inline-block;
-    }
-
-    #services-section h2 {
-        text-align: center;
-    }
-
-    #services-section h3 {
-        font-size: 3rem;
-        border-bottom: 5px solid #f9c041;
-        text-align: center;
-    }
-
-    #services-section #services-container {
-        width: 90%;
-        margin: 0;
-        padding: 0 5%;
-    }
-    
-    #services-section #services-container p {
-        width: 95%;
-        margin: 0;
-        font-size: 2rem;
-        font-weight: 500;
-        padding: 2% 2.5%;
-        text-align: center;
-
-    }
-    
-    #services-section img {
-        float: right;
-        padding: 50px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    #service-area-section {
-        background-image: url(../resources/GoodMapShadow.png);
-        background-position: -750px -850px;
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: auto 100%;
-        padding-top: 500px;
-    }
-
-    #service-area-list ul li {
-        font-weight: 900;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 2% 0;
-        width: 49%;
-        display:inline-block;
-    }
+  .map-area,
+  .cities-grid {
+    flex: none; /* Override the flex property */
+    width: 100%; /* Make each take up the full width */
+  }
 }
