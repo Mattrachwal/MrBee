@@ -48,13 +48,13 @@ html {
 }
 
 .navbar-nav li {
-  padding: 0 10px;
+  padding: 0 25px;
 }
 
 .navbar-nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .navbar-nav a:hover {
@@ -288,7 +288,7 @@ header img {
 }
 
 .service-area p {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .service-area .container {
