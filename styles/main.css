@@ -18,6 +18,48 @@ html {
   padding: 0 15px;
 }
 
+/* Navbar Styles */
+.navbar {
+  background-color: #202020;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between logo and navigation */
+  border-bottom: 2px solid #f9c041;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 50px; /* Adjust based on your logo's dimensions */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0; /* Ensure nav items are aligned to the right */
+  align-items: center;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navbar-nav a:hover {
+  color: #f9c041;
+}
 /* Header Styles */
 header {
   background: #202020;
@@ -318,6 +360,70 @@ footer {
   padding: 20px 0;
 }
 
+/* THIS IS FOR THE SEPERATE PAGES ON TREATMENTS */
+
+/* Base styles for all treatment pages */
+.treatment-page .container {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.treatment-page h1,
+.treatment-page h2 {
+  color: #202020;
+}
+
+.treatment-page p,
+.treatment-page li {
+  color: #555;
+}
+
+.treatment-page ul {
+  padding-left: 20px;
+}
+
+/* Preventative Treatment Page Specific Styles */
+.preventative-treatment .service-highlight {
+  background-color: #f9f3e4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #f9c041;
+}
+
+/* Nest Treatment Page Specific Styles */
+.nest-treatment .service-highlight {
+  background-color: #e4f9f3;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #8bc34a;
+}
+
+/* Nuisance Insect Treatment Page Specific Styles */
+.nuisance-insect-treatment .service-highlight {
+  background-color: #e4eaf9;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #3f51b5;
+}
+
+/* Common styles for "Learn More" links across all treatment pages */
+.treatment-page .service-link {
+  background-color: #f9c041;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.treatment-page .service-link:hover {
+  background-color: #e89c30;
+}
+
 /* Responsive Design */
 @media (max-width: 980px) {
   header {
@@ -336,6 +442,25 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start; /* Align nav items to the start (left) */
+    width: 100%;
+  }
+
+  .navbar-nav li {
+    padding: 5px 0;
+  }
+
+  .navbar-logo,
+  .navbar-nav {
+    padding-left: 15px; /* Add padding for mobile layout */
+  }
   header {
     padding: 50px 0 25px 0;
   }
@@ -436,5 +561,36 @@ footer {
   .cities-grid {
     flex: none; /* Override the flex property */
     width: 100%; /* Make each take up the full width */
+  }
+
+  /* THE TREATMENT PAGES */
+
+  .treatment-page .container {
+    padding: 15px; /* Reduces padding for smaller screens */
+  }
+
+  .treatment-page h1,
+  .treatment-page h2 {
+    font-size: 2rem; /* Adjusts font size for better readability on mobile */
+  }
+
+  .treatment-page p,
+  .treatment-page li {
+    font-size: 1rem; /* Slightly reduces font size */
+  }
+
+  .treatment-page ul {
+    padding-left: 15px; /* Adjusts padding for list indentation */
+  }
+
+  .service-highlight {
+    padding: 10px; /* Adjusts padding for highlight sections */
+    margin-bottom: 15px; /* Reduces spacing to save screen real estate */
+  }
+
+  .service-link {
+    font-size: 1.25rem; /* Enlarges link/button text for easier interaction */
+    padding: 12px 20px; /* Increases padding for a larger clickable area */
+    margin-top: 20px; /* Ensures sufficient spacing above the call to action */
   }
 }
