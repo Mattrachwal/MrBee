@@ -125,6 +125,7 @@ header img {
   width: 100%;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.8);
   margin: 50px 0;
+  text-align: center;
 }
 
 .number {
@@ -592,5 +593,13 @@ footer {
     font-size: 1.25rem; /* Enlarges link/button text for easier interaction */
     padding: 12px 20px; /* Increases padding for a larger clickable area */
     margin-top: 20px; /* Ensures sufficient spacing above the call to action */
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .service-area h2 {
+    font-size: 2rem;
   }
 }
