@@ -19,13 +19,13 @@ html {
 }
 
 .navbar-toggle {
-  display: none; /* Hide by default, will be shown in the media query for mobile */
-  background-color: #202020; /* Makes the button background transparent */
-  border: none; /* Removes the border */
-  color: #fff; /* Sets the icon color */
-  font-size: 24px; /* Adjust the size of the hamburger icon */
-  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
-  padding: 10px; /* Adds some padding to make the button easier to tap on mobile */
+  display: none;
+  background-color: #202020;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* Navbar Styles */
@@ -34,8 +34,8 @@ html {
   color: #fff;
   padding: 10px 0;
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 2px solid #f9c041;
 }
 
@@ -43,7 +43,7 @@ html {
   list-style: none;
   padding: 0;
   display: flex;
-  margin: 0; /* Ensure nav items are aligned to the right */
+  margin: 0;
   align-items: center;
 }
 
@@ -69,7 +69,7 @@ header {
   font-size: 1.5rem;
   background-image: url("../resources/GiantBlackLogo.png");
   background-position: center;
-  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
+  background-size: cover;
 }
 header img {
   position: fixed;
@@ -142,11 +142,7 @@ header img {
   position: relative;
   text-align: center;
   overflow: hidden;
-  /* box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); */
-  /* box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.5); */
   box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);
-
-  /* padding: 20px 0; */
 }
 
 .about-service .container {
@@ -159,13 +155,13 @@ header img {
 }
 
 .about-service .image-container {
-  width: 50%; /* Full width or adjust as needed */
-  height: 500px; /* Fixed height to control 'frame' size */
-  background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
-  background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
-  background-position: top; /* Center the image, or adjust for specific focus */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  overflow: hidden; /* Ensures the container doesn't expand beyond the specified bounds */
+  width: 50%;
+  height: 500px;
+  background-image: url("../resources/JasonCutout.png");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .tagline {
@@ -177,8 +173,6 @@ header img {
   background: #ffffff;
   padding: 20px;
   gap: 10px;
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  z-index: 100; */
 }
 
 .tagline h2 {
@@ -234,19 +228,17 @@ header img {
   background-color: #ffffff;
   padding: 20px;
   box-sizing: border-box;
-  /* border: 2px solid #202020; */
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  justify-content: space-between; /* Ensures header and link are spaced out */
+  justify-content: space-between;
 }
 
 .service-item h3 {
-  font-size: 1.5rem; /* Adjusted font size */
+  font-size: 1.5rem;
   line-height: 2rem;
   color: #202020;
-  margin-bottom: 10px; /* Space below the heading */
-  min-height: 4rem; /* Example minimum height */
-  /* This height should be enough to accommodate two lines of text at the current font size */
+  margin-bottom: 10px;
+  min-height: 4rem;
 }
 
 .service-item p {
@@ -254,12 +246,12 @@ header img {
   color: #555;
   line-height: 1.6;
   font-weight: 500;
-  flex-grow: 1; /* Allows paragraph to take up available space, pushing link down */
+  flex-grow: 1;
 }
 
 .service-link {
-  align-self: flex-end; /* Aligns the link to the right */
-  margin-top: 25px; /* Pushes the link to the bottom */
+  align-self: flex-end;
+  margin-top: 25px;
   text-decoration: none;
   background-color: #f9c041;
   color: #ffffff;
@@ -299,27 +291,24 @@ header img {
 
 .content-area {
   display: flex;
-  align-items: stretch; /* This will make both children of .content-area stretch to the same height */
+  align-items: stretch;
 }
 
 .map-area {
   margin-top: 20px;
-  width: 50%; /* Takes up half of the container */
+  width: 50%;
   background-image: url("../resources/wisconsin19WhiteBoarder.svg");
-  background-size: cover; /* Cover the entire area of the div */
-  background-position: center; /* Center the background image */
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .cities-grid {
   width: 50%;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(120px, 1fr)
-  ); /* Creates a flexible grid for the city names */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 10px;
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
 }
 
 .cities-grid span {
@@ -332,19 +321,16 @@ header img {
 .counter-section {
   text-align: center;
   margin: 40px auto;
-
   font-size: 3rem;
   font-family: "Arial", sans-serif;
   background-color: #ffffff;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  /* border-bottom: 1px solid #f9c041; */
   width: 100%;
   display: inline-block;
 }
 
 #counter {
   font-weight: bold;
-  color: #f9c041; /* Theme color for numbers */
+  color: #f9c041;
 }
 
 /* Additional styling for "dead wasps" text to differentiate from the counter */
@@ -444,7 +430,7 @@ footer {
 
 @media (max-width: 768px) {
   .navbar-toggle {
-    display: block; /* Only show the toggle button on small screens */
+    display: block;
   }
 
   .navbar-toggle {
@@ -464,7 +450,7 @@ footer {
   }
 
   .navbar.active .navbar-nav {
-    display: flex; /* Show nav items when navbar is active */
+    display: flex;
   }
 
   .navbar-nav li {
@@ -507,6 +493,7 @@ footer {
   .number {
     font-size: 2rem;
   }
+
   /* Jason Section */
   .about-service {
     background-color: #f9c041;
@@ -520,12 +507,12 @@ footer {
   }
 
   .about-service .image-container {
-    width: 80%; /* Full width or adjust as needed */
+    width: 80%;
     height: 250px;
-    background-image: url("../resources/JasonCutout.png"); /* Adjust path as necessary */
-    background-size: cover; /* Cover ensures the image covers the area, cropping as needed */
-    background-position: 0 0; /* Center the image, or adjust for specific focus */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url("../resources/JasonCutout.png");
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
     overflow: hidden;
   }
 
@@ -541,11 +528,11 @@ footer {
   .tagline h2 {
     line-height: 2rem;
     font-size: 2.5rem;
-    margin: 10px 0; /* Adds a bit of margin between stacked H2s */
+    margin: 10px 0;
   }
   /* SERVICES SECTION */
   .services-wrapper {
-    grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
+    grid-template-columns: 1fr;
   }
 
   .service-item {
@@ -555,6 +542,7 @@ footer {
   .section-bottom-image {
     height: 0%;
   }
+
   /* Additional adjustments for mobile layout */
   .header-content,
   .services,
@@ -565,8 +553,8 @@ footer {
 
   .cta-button {
     display: block;
-    width: 90%; /* Slightly reduce width for padding */
-    margin: 20px auto; /* Center the button with automatic margins */
+    width: 90%;
+    margin: 20px auto;
   }
 
   .content-area {
@@ -575,39 +563,39 @@ footer {
 
   .map-area,
   .cities-grid {
-    flex: none; /* Override the flex property */
-    width: 100%; /* Make each take up the full width */
+    flex: none;
+    width: 100%;
   }
 
   /* THE TREATMENT PAGES */
 
   .treatment-page .container {
-    padding: 15px; /* Reduces padding for smaller screens */
+    padding: 15px;
   }
 
   .treatment-page h1,
   .treatment-page h2 {
-    font-size: 2rem; /* Adjusts font size for better readability on mobile */
+    font-size: 2rem;
   }
 
   .treatment-page p,
   .treatment-page li {
-    font-size: 1rem; /* Slightly reduces font size */
+    font-size: 1rem;
   }
 
   .treatment-page ul {
-    padding-left: 15px; /* Adjusts padding for list indentation */
+    padding-left: 15px;
   }
 
   .service-highlight {
-    padding: 10px; /* Adjusts padding for highlight sections */
-    margin-bottom: 15px; /* Reduces spacing to save screen real estate */
+    padding: 10px;
+    margin-bottom: 15px;
   }
 
   .service-link {
-    font-size: 1.25rem; /* Enlarges link/button text for easier interaction */
-    padding: 12px 20px; /* Increases padding for a larger clickable area */
-    margin-top: 20px; /* Ensures sufficient spacing above the call to action */
+    font-size: 1.25rem;
+    padding: 12px 20px;
+    margin-top: 20px;
   }
 
   .services h2 {

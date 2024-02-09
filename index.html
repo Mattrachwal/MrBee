@@ -46,8 +46,6 @@
       </div>
     </nav>
     <header>
-      <!-- <img id="header-logo" src="./resources/logoWithText.png" /> -->
-
       <div class="container header-content">
         <h1>MR<span class="yellow-period">.</span> BEE</h1>
         <span id="h1-description"
@@ -187,7 +185,7 @@
     </footer>
 
     <script>
-      let count = 4000000; // Starting number
+      let count = 4000000;
       const counterElement = document.getElementById("counter");
 
       function animateCountUp(endValue, duration = 200) {
@@ -196,7 +194,7 @@
 
         function updateNumber(currentTime) {
           const elapsedTime = currentTime - startTime;
-          const progress = Math.min(elapsedTime / duration, 1); // Ensure progress doesn't exceed 1
+          const progress = Math.min(elapsedTime / duration, 1);
           const currentValue = startValue + (endValue - startValue) * progress;
           counterElement.innerText =
             Math.floor(currentValue).toLocaleString("en-US");
@@ -204,7 +202,7 @@
           if (elapsedTime < duration) {
             requestAnimationFrame(updateNumber);
           } else {
-            count = endValue; // Ensure final value is set and formatted properly at the end
+            count = endValue;
             counterElement.innerText = count.toLocaleString("en-US");
           }
         }
@@ -213,14 +211,11 @@
       }
 
       function updateCounter() {
-        // Generate a random increment and a new count value
         const increment = Math.floor(Math.random() * (5000 - 100 + 1)) + 100;
         const newCount = count + increment;
 
-        // Animate count up to the new value
         animateCountUp(newCount);
 
-        // Generate a random duration between 1 second (1000ms) and 10 seconds (10000ms) for the next update
         const duration = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
         setTimeout(updateCounter, duration);
       }
